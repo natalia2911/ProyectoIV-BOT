@@ -4,4 +4,6 @@ Repositorio creado para la asignatura de Infraestructura Virtual, de 4º curso, 
 
 ## BOT Noticias
 
-Mi proyecto para este curso se basará en crear un microservicio en la nube que se base en un bot de telegram que 
+Mi proyecto para este curso se basará en crear un microservicio en la nube que se base en un bot de telegram que nos indique las noticias del día o de días anteriores. 
+
+El lenguaje en que programaremos nuestro proyecto será en Python.
