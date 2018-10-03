@@ -22,6 +22,8 @@ Nuestro usuario podrá consultar las noticias de diferentes días, según la pet
 
 - Para realizar el testeo vamos a utilizar la librería `unittest` por su gran variedad de funcionalidades. [Más información](https://docs.python.org/3/library/unittest.html)
 
+- El framework que vamos a usar será `Django` ya que me parece que será una buena herramiento para usar con Python
+
 
 
 
