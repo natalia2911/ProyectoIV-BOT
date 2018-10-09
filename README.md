@@ -22,7 +22,11 @@ Nuestro usuario podrá consultar las noticias de diferentes días, según la pet
 
 - Para realizar el testeo vamos a utilizar la librería `unittest` por su gran variedad de funcionalidades. [Más información](https://docs.python.org/3/library/unittest.html)
 
-- El framework que vamos a usar será `Django` ya que me parece que será una buena herramienta para usar con Python, y nos será util en nuestro proyecto.
+- El micro-framework que vamos a usar será `Flask` ya que me parece que será una buena herramienta para usar con Python, para desarrollar nuestro microservicio.
+
+- Ahora mismo utilizaremos `ficheros JSON` para el almacenamiento estatico, más tarde procederemos a implementar la BBDD.
+
+- Para realizar los test usaremos [Travis-CI](https://travis-ci.org/)
 
 
 
