@@ -1,0 +1,24 @@
+
+[
+  {
+    "usuario": "000102034847",
+    "fecha": "2018-03-02",
+    "noticia": [
+      {
+        "Pepe ha sido el alumno con mejor nota del expediente"
+      },
+      {
+        "Ha sido robada una bicileta de las jaulas, si la veis contactar con el numero 999999999"
+      },
+    ]
+  },
+  {
+    "usuario": "918291371245",
+    "fecha": "2018-10-11",
+    "noticia": [
+      {
+        "Guardamos un minuto de silencio por la catastrofe producida en Mallorca"
+      },
+    ]
+  },
+]
