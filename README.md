@@ -29,7 +29,22 @@ Nuestro usuario podrá consultar las noticias de diferentes días, según la pet
 - Para realizar los test usaremos [Travis-CI](https://travis-ci.org/)
 
 
+## Integración Continua
 
+La integración continua es un modelo que consiste en hacer integraciones automáticas de un proyecto lo más a menudo posible para así poder detectar fallos cuanto antes
+
+Para poder detectar dichos fallos usaremos una seria de test basandonos en `Travis CI`
+
+Para hacer realizar los test vamos a usar `funciones.py` donde podremos obtener todas las noticias de un determinado día, las noticias que un usuario público, añadir una noticia a la lista de noticias.
+
+Para realizar los test es necesario ejecutar el fichero `test.py`, tras instalarlo
+
+- Para instalarlo lo que tenemos que hacer es ir:
+	1. Tenemos que ir a la página de [Travis-CI](https://travis-ci.com/)
+	2. Tenemos que seleccionar nuestro proyecto para que pueda pasar los test.
+	3. Tenemos que añadir un fichero de configuración que nos indique que el lenguaje es python, e instalar el fichero de `requirements.txt`
+
+	Para más información ir a: [más info](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/doc/doc-integracionCont.md)
 
 
 
