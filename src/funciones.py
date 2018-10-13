@@ -17,8 +17,7 @@ class Noticias:
 				if i["fecha"] == fecha:
 					for j in i["noticia"]:
 						noticia.append(j)
-				if not noticia: noticia = False 
-
+				if not noticia: noticia = False
 			return noticia
 			
 
