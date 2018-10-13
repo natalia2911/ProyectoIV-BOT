@@ -41,7 +41,7 @@ class Noticias:
 		try:
 			self.data[usuario-1]["noticia"].append({'noticia': noticia})
 			with open('noticias.json', 'w') as file:
-				json.dump(self.data, file)
+					json.dump(self.data, file)
 
 			return True
 		except:
