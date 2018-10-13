@@ -12,9 +12,7 @@ class Noticias:
 				self.data = json.load(f)
 
 	def getNoticiasFecha(self, fecha):
-
 		noticia = []
-
 		for i in self.data:
 			if i["fecha"] == fecha:
 				for j in i["noticia"]:
@@ -25,7 +23,6 @@ class Noticias:
 		
 
 	def getNoticiasUsuario(self, usuario):
-
 		noticia = []
 		try:
 			for i in self.data[usuario-1]["noticia"]:
