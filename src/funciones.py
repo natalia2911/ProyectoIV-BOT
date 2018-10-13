@@ -8,8 +8,8 @@ import calendar
 class Noticias:
 
 		def __init__(self):
-		with open('noticias.json', 'r') as f:
-			self.data = json.load(f)
+			with open('noticias.json', 'r') as f:
+				self.data = json.load(f)
 
 	def getNoticiasFecha(self, fecha):
 
