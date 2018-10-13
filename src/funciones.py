@@ -26,7 +26,7 @@ class Noticias:
 			try:
 				for i in self.ap[usuario-1]["noticia"]:
 					noticia.append(i["noticia"])
-				except:
+			except:
 					noticia = False
 			return noticia
 
