@@ -34,8 +34,8 @@ class Noticias:
 			fecha = date.today()
 			try:
 				self.data[usuario-1]["noticia"].append({'usuario': usuario,'fecha': fecha, 'noticia': noticia})
-				#with open('noticias.json', 'w') as f:
-					#json.dump(self.data, f)
+				with open('noticias.json', 'w') as f:
+					json.dump(self.data, f)
 				return True
 			except:
 				return False
