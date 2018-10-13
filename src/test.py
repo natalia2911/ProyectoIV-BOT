@@ -5,7 +5,7 @@ import funciones
 
 class Tests(unittest.TestCase):
 
-	test = funciones.Funciones()
+	test = funciones.Noticias()
 
 
 	if __name__ == '__main__':
