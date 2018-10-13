@@ -8,8 +8,8 @@ import calendar
 class Noticias:
 
 		def __init__(self):
-		with open('noticias.json', 'r') as file:
-			self.data = json.load(file)
+		with open('noticias.json', 'r') as f:
+			self.data = json.load(f)
 
 	def getNoticiasFecha(self, fecha):
 
@@ -39,8 +39,8 @@ class Noticias:
 		fecha = date.today()
 			try:
 				self.data[usuario-1]["noticia"].append({'usuario': usuario,'fecha': fecha, 'noticia': noticia})
-				with open('noticias.json', 'w') as file:
-					json.dump(self.data, file)
+				#with open('noticias.json', 'w') as f:
+					#json.dump(self.data, f)
 				return True
 			except:
 				return False
