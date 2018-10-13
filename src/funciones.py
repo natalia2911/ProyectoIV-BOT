@@ -28,8 +28,7 @@ class Noticias:
 					noticia.append(i["noticia"])
 			except:
 					noticia = False
-
-				return noticia
+			return noticia
 
 		def setNoticia(self, usuario, noticia):
 			fecha = date.today()
