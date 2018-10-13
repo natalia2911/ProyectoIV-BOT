@@ -1,4 +1,3 @@
-
 [
   {
     "usuario": "000102034847",
@@ -9,7 +8,7 @@
       },
       {
         "Ha sido robada una bicileta de las jaulas, si la veis contactar con el numero 999999999"
-      },
+      }
     ]
   },
   {
@@ -18,7 +17,7 @@
     "noticia": [
       {
         "Guardamos un minuto de silencio por la catastrofe producida en Mallorca"
-      },
+      }
     ]
-  },
+  }
 ]

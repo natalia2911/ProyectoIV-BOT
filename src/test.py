@@ -6,8 +6,6 @@ import funciones
 class Tests(unittest.TestCase):
 
 	test = funciones.Noticias()
-
-
 	if __name__ == '__main__':
 		unittest.main()
 
