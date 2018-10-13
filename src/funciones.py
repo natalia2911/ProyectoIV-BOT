@@ -41,7 +41,6 @@ class Noticias:
 			self.ap[usuario-1]["noticia"].append({"noticia": noticia})
 			with open('noticias.json', 'w') as f:
 				json.dump(self.ap, f)
-
 			return True
 		except:
 			return False
