@@ -37,14 +37,11 @@ class Noticias:
 
 	def setNoticia(self, usuario, noticia):
 		fecha = date.today()
-		try:
-			self.data[usuario-1]["noticia"].append({'noticia': noticia})
-			with open('noticias.json', 'w') as file:
-				json.dump(self.data, file)
-
-			return True
-		except:
-			return False
-
-
+			try:
+				self.data[usuario-1]["noticia"].append({'usuario': usuario,'fecha': fecha, 'noticia': noticia})
+				with open('noticias.json', 'w') as file:
+					json.dump(self.data, file)
+				return True
+			except:
+				return False
 
