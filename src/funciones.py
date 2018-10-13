@@ -27,18 +27,18 @@ class Noticias:
 			try:
 				for i in self.data[usuario-1]["noticia"]:
 					noticia.append(i["noticia"])
-				except:
+			except:
 					noticia = False
 
 				return noticia
 
 		def setNoticia(self, usuario, noticia):
 			fecha = date.today()
-				try:
-					self.data[usuario-1]["noticia"].append({'usuario': usuario,'fecha': fecha, 'noticia': noticia})
-					#with open('noticias.json', 'w') as f:
-						#json.dump(self.data, f)
-					return True
-				except:
-					return False
+			try:
+				self.data[usuario-1]["noticia"].append({'usuario': usuario,'fecha': fecha, 'noticia': noticia})
+				#with open('noticias.json', 'w') as f:
+					#json.dump(self.data, f)
+				return True
+			except:
+				return False
 
