@@ -2,6 +2,14 @@
 # -*- coding: utf-8 -*-
 import unittest
 import funciones
+import pytest
+import sys, os.path
+
+src = (os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
++ '/src/')
+sys.path.append(src)
+
+from funciones import Noticias
 
 class Tests(unittest.TestCase):
 
@@ -22,6 +30,6 @@ class Tests(unittest.TestCase):
 		self.assertEqual(self.test.getNoticiasUsuario("1"),str('Marcos, es el mejor alumno de la clase'),"El usuario es correcto")
 
 	def testAniadirNoticia(self):
-		self.assertEqual(self.test.setNoticia("cadena","cadena"),False,"El usuario no puede ser una cadena, tiene que ser un número")
-		self.assertEqual(self.test.setNoticia("0","0"),False,"La noticia no puede ser un entero")
-		self.assertEqual(self.test.setNoticia("10","Habrá una fiesta de la escuela el día 9"),True,"La noticia se ha añadido de forma correcta")
+		self.assertEqual(self.test.setNoticia("cadena","cadena",3),False,"El usuario no puede ser una cadena, tiene que ser un número")
+		self.assertEqual(self.test.setNoticia("0","0",3),False,"La noticia no puede ser un entero")
+		self.assertEqual(self.test.setNoticia("10","Habrá una fiesta de la escuela el día 9",3),True,"La noticia se ha añadido de forma correcta")

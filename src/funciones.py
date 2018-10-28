@@ -4,16 +4,25 @@
 import json
 from datetime import datetime, date, time, timedelta
 import calendar
+import os
+
 
 class Noticias:
 
 		def __init__(self):
-			with open('noticias.json', 'r') as f:
-				self.ap = json.load(f)
+			try:
+	            if os.path.exists('noticias.json'):
+	                with open('noticias.json', 'r') as f:
+	                    self.noticias = json.load(f)
+	            else:
+	                raise IOError("No se encuentra 'noticias.json'")
+
+	        except IOError as fallo:
+             	print("Error {}".format( fallo ) )
 
 		def getNoticiasFecha(self, fecha):
 			noticia = []
-			for i in self.ap:
+			for i in self.noticias:
 				if i["fecha"] == fecha:
 					for j in i["noticia"]:
 						noticia.append(j)
@@ -23,21 +32,25 @@ class Noticias:
 
 		def getNoticiasUsuario(self, usuario):
 			noticia = []
-			try:
-				for i in self.ap[usuario-1]["noticia"]:
-					noticia.append(i["noticia"])
-			except:
-					noticia = False
+			for i in self.noticias:
+				if i["usuario"] == usuario:
+					for j in i["noticia"]:
+						noticia.append(j)
+				if not noticia: noticia = False 
 			return noticia
 
-		def setNoticia(self, usuario, noticia):
-			fecha = date.today()
-			try:
-				self.ap[usuario-1]["noticia"].append({"usuario":usuario, "fecha":fecha, "noticia":noticia})
+		def setNoticia(self, usuario, noticia, nNoticia):
+
+			if len(self.noticias) > nNoticia and nNoticia >=0:
+				fecha = date.today()
+				self.noticias["nNoticia"]["usuario"] = usuario
+				self.noticias["nNoticia"]["fecha"] = fecha
+				self.noticias["nNoticia"]["noticia"] = noticia
+
 				with open('noticias.json', 'w') as f:
-					json.dump(self.ap, f)
+					json.dump(self.noticias, f)
 				return True
-			except:
+			else:
 				return False
 
 
