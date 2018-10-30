@@ -38,7 +38,6 @@ El uso que esta clase tendría sería mostrar y añadir noticias, teniendo en cu
 
 Para instalarla y probarla tendremos que instalar los `requirements.txt` y con los archivos de la carpeta `src`, ejecutamos la clase `test.py`, con esto bastaría para poder probarla.
 
-
 Para más información ir a: [más info](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/doc/doc-integracionCont.md)
 
 
