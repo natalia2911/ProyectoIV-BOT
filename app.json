@@ -1,0 +1,7 @@
+{
+  "name": "Noticiero",
+  "description": "Aplicacion donde se podrán inscribir una serie de noticias, relacionadas con la Universidad, también podremos obtenerlas por distintos modos",
+  "repository": "https://github.com/natalia2911/ProyectoIV-BOT",
+  "logo":,
+  "keywords": ["python", "universidad", "noticias", "noticiero"]
+}
