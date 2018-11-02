@@ -11,16 +11,17 @@ def inicio():
 	return jsonify(status="Ok")
 
 @app.route('/noticia/<usuario>')
-def Noticias(usuario):
+def Noticias_1(usuario):
 	n=funciones.Noticias()
 	datos=n.getNoticiasUsuario(usuario)
 	return jsonify(noticia=datos)
     
-@app.route('/noticias/<fecha>')
-def Noticias(fecha):
+@app.route('/noticia/<fecha>')
+def Noticias_2(fecha):
 	n=funciones.Noticias()
 	datos=n.getNoticiasFecha(fecha)
 	return jsonify(noticia=datos)
+
 
 @app.errorhandler(404)
 def page_not_found(error):
