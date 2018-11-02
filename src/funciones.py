@@ -10,16 +10,9 @@ import os
 class Noticias:
 
 		def __init__(self):
-			try:
-	            if os.path.exists('noticias.json'):
-	                with open('noticias.json', 'r') as f:
-	                    self.noticias = json.load(f)
-	            else:
-	                raise IOError("No se encuentra 'noticias.json'")
-
-	        except IOError as fallo:
-             	print("Error {}".format( fallo ) )
-
+			with open('noticias.json', 'r') as f:
+				self.noticias = json.load(f)
+	           
 		def getNoticiasFecha(self, fecha):
 			noticia = []
 			for i in self.noticias:
