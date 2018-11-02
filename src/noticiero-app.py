@@ -13,7 +13,7 @@ def Noticias(usuario):
 	datos=n.getNoticiasUsuario(usuario)
 	return jsonify(noticia=datos)
     
-@app.route('/noticia/<fecha>')
+@app.route('/noticias/<fecha>')
 def Noticias(fecha):
 	n=funciones.Noticias()
 	datos=n.getNoticiasFecha(fecha)
