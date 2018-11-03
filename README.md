@@ -67,7 +67,19 @@ Una de las cosas que nos ha hecho elegirlo ha sido:
 	- y es muy fácil de manejar.
 
 
-**Despliegue** `https://noticiero-app.herokuapp.com/`
+**Despliegue** https://noticiero-app.herokuapp.com/
+
+**Ejemplos**
+	1. https://noticiero-app.herokuapp.com/ : nos devuelve {status="Ok"}
+	![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/hito3-5.png)
+	2. https://noticiero-app.herokuapp.com/noticia/usuario/000102034847 : Nos devuelve las noticias de un determinado usuario (En nuestro caso el usuario es un numero)
+	![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/hito3-6.png)
+	3. https://noticiero-app.herokuapp.com/noticia/fecha/2032018 : Nos devuelve una noticia de una determinada fecha
+	![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/hito3-7.png)
+	4. https://noticiero-app.herokuapp.com/noticia/fecha/1 : Vemos aqui una fecha que no esta, y por lo tanto sale como que la noticia es False
+	![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/hito3-8.png)
+	5. https://noticiero-app.herokuapp.com/noticia/prueba_error : Vemos como no encuentra la pagina y sale un error
+	![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/hito3-9.png)
 
 [Más información consultar Documentación](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/doc/doc-confPaaS.md)
 
