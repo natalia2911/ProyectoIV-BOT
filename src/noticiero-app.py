@@ -10,13 +10,13 @@ app = Flask(__name__)
 def inicio():
 	return jsonify(status="Ok")
 
-@app.route('/noticia/<usuario>')
+@app.route('/noticia/usuario/<usuario>')
 def Noticias_1(usuario):
 	n=funciones.Noticias()
 	datos=n.getNoticiasUsuario(usuario)
 	return jsonify(noticia=datos)
     
-@app.route('/noticia/<fecha>')
+@app.route('/noticia/fecha/<fecha>')
 def Noticias_2(fecha):
 	n=funciones.Noticias()
 	datos=n.getNoticiasFecha(fecha)
