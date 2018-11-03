@@ -12,7 +12,7 @@ class Noticias:
 		def __init__(self):
 			with open('noticias.json', 'r') as f:
 				self.noticias = json.load(f)
-	           
+
 		def getNoticiasFecha(self, fecha):
 			noticia = []
 			for i in self.noticias:
@@ -21,7 +21,6 @@ class Noticias:
 						noticia.append(j)
 				if not noticia: noticia = False 
 			return noticia
-			
 
 		def getNoticiasUsuario(self, usuario):
 			noticia = []
@@ -36,6 +35,7 @@ class Noticias:
 
 			if len(self.noticias) > nNoticia and nNoticia >=0:
 				fecha = date.today()
+
 				self.noticias["nNoticia"]["usuario"] = usuario
 				self.noticias["nNoticia"]["fecha"] = fecha
 				self.noticias["nNoticia"]["noticia"] = noticia

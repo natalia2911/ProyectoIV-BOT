@@ -1,7 +1,7 @@
 [
   {
     "usuario":"000102034847",
-    "fecha": "2018-03-02",
+    "fecha": "2/03/2018",
     "noticia":[
       {
         "Noticia 1":"Pepe ha sido el alumno con mejor nota del expediente"
@@ -13,7 +13,7 @@
   },
   {
     "usuario":"918291371245",
-    "fecha":"2018-10-11",
+    "fecha":"11/10/2018",
     "noticia":[
       {
         "Noticia 1":"Guardamos un minuto de silencio por la catastrofe producida en Mallorca"
