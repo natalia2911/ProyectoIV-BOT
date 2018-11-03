@@ -16,7 +16,7 @@ Heroku es propiedad de Salesforce.com.1​ Heroku, es una de las primeras plataf
 2. Tenemos que crear una nueva aplicación
 ![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/hito3-1.png)
 
-	Tenemos que ponerle el nombre de la aplicación, en 		este caso vamos a poner `noticiero-app`
+	Tenemos que ponerle el nombre de la aplicación, en este caso vamos a poner `noticiero-app`
 	
 ![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/hito3-2.png)
 
@@ -42,3 +42,16 @@ Tenemos que tener la aplicación en la linea de comandos, con el cliente de Hero
 
 
 6. Aquí tenemos una serie de ejemplos de funcionamiento.
+
+
+
+1.  https://noticiero-app.herokuapp.com/ : nos devuelve {status="Ok"}
+2. https://noticiero-app.herokuapp.com/noticia/usuario/000102034847 : Nos devuelve las noticias de un determinado usuario (En nuestro caso el usuario es un numero)
+3. https://noticiero-app.herokuapp.com/noticia/fecha/2032018 : Nos devuelve una noticia de una determinada fecha
+4. https://noticiero-app.herokuapp.com/noticia/fecha/1 : Vemos aqui una fecha que no esta, y por lo tanto sale como que la noticia es False
+5. https://noticiero-app.herokuapp.com/noticia/prueba_error : Vemos como no encuentra la pagina y sale un error
+
+![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/hito3-6.png)
+![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/hito3-7.png)
+![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/hito3-8.png)
+![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/hito3-9.png)
