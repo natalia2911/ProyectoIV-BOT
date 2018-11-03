@@ -51,14 +51,15 @@ Para quien no sepa que es un Paas aquí dejo un pequeña explicación :
 
 El concepto de Plataforma como Servicio (PaaS, Platform as a Service) es una categoría de servicios cloud que proporciona una plataforma y un entorno que permiten a los desarrolladores crear aplicaciones y servicios que funcionen a través de internet. Los servicios PaaS se alojan en la nube, y los usuarios pueden acceder a ellos simplemente a través de su navegador web. [Más info](https://www.interoute.es/what-paas)
 
+
 #### Motivos por los que se ha elegido Heroku
 
 Las caracteristicas principales de Heroku son:
-	1. Es una plataforma totalemente gratuita
-	2. Podemos crear un dyno, que puede ejecutar un máximo de dos tipos de procesos
-	3. Nuestro dyno utiliza 512 Mb de RAM
-	4. Tras 30 minutos de inactividad el dyno se para (sleep), además debe estar parado 6 horas cada 24 horas.
-	5. Podemos utilizar una base de datos postgreSQL con no más de 10.000 registros
+1.  Es una plataforma totalemente gratuita
+2. Podemos crear un dyno, que puede ejecutar un máximo de dos tipos de procesos
+3. Nuestro dyno utiliza 512 Mb de RAM
+4. Tras 30 minutos de inactividad el dyno se para (sleep), además debe estar parado 6 horas cada 24 horas.
+5. Podemos utilizar una base de datos postgreSQL con no más de 10.000 registros
 
 Una de las cosas que nos ha hecho elegirlo ha sido:
 	- Sobre todo que es gratis
@@ -70,13 +71,13 @@ Una de las cosas que nos ha hecho elegirlo ha sido:
 **Despliegue** https://noticiero-app.herokuapp.com/
 
 **Ejemplos**
-	1. https://noticiero-app.herokuapp.com/ : nos devuelve {status="Ok"}
-	2. https://noticiero-app.herokuapp.com/noticia/usuario/000102034847 : Nos devuelve las noticias de un determinado usuario (En nuestro caso el usuario es un numero)
-	3. https://noticiero-app.herokuapp.com/noticia/fecha/2032018 : Nos devuelve una noticia de una determinada fecha
-	4. https://noticiero-app.herokuapp.com/noticia/fecha/1 : Vemos aqui una fecha que no esta, y por lo tanto sale como que la noticia es False
-	5. https://noticiero-app.herokuapp.com/noticia/prueba_error : Vemos como no encuentra la pagina y sale un error
 
-![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/hito3-5.png)
+1.  https://noticiero-app.herokuapp.com/ : nos devuelve {status="Ok"}
+2. https://noticiero-app.herokuapp.com/noticia/usuario/000102034847 : Nos devuelve las noticias de un determinado usuario (En nuestro caso el usuario es un numero)
+3. https://noticiero-app.herokuapp.com/noticia/fecha/2032018 : Nos devuelve una noticia de una determinada fecha
+4. https://noticiero-app.herokuapp.com/noticia/fecha/1 : Vemos aqui una fecha que no esta, y por lo tanto sale como que la noticia es False
+5. https://noticiero-app.herokuapp.com/noticia/prueba_error : Vemos como no encuentra la pagina y sale un error
+
 ![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/hito3-6.png)
 ![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/hito3-7.png)
 ![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/hito3-8.png)
@@ -84,13 +85,4 @@ Una de las cosas que nos ha hecho elegirlo ha sido:
 
 
 [Más información consultar Documentación](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/doc/doc-confPaaS.md)
-
-
-
-
-
-
-
-
-
 
