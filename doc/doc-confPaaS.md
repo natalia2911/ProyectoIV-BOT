@@ -45,11 +45,11 @@ Tenemos que tener la aplicación en la linea de comandos, con el cliente de Hero
 
 
 
-1.  https://noticiero-app.herokuapp.com/ : nos devuelve {status="Ok"}
-2. https://noticiero-app.herokuapp.com/noticia/usuario/000102034847 : Nos devuelve las noticias de un determinado usuario (En nuestro caso el usuario es un numero)
-3. https://noticiero-app.herokuapp.com/noticia/fecha/2032018 : Nos devuelve una noticia de una determinada fecha
-4. https://noticiero-app.herokuapp.com/noticia/fecha/1 : Vemos aqui una fecha que no esta, y por lo tanto sale como que la noticia es False
-5. https://noticiero-app.herokuapp.com/noticia/prueba_error : Vemos como no encuentra la pagina y sale un error
+-   https://noticiero-app.herokuapp.com/ : nos devuelve {status="Ok"}
+-   https://noticiero-app.herokuapp.com/noticia/usuario/000102034847 : Nos devuelve las noticias de un determinado usuario (En nuestro caso el usuario es un numero)
+-   https://noticiero-app.herokuapp.com/noticia/fecha/2032018 : Nos devuelve una noticia de una determinada fecha
+-   https://noticiero-app.herokuapp.com/noticia/fecha/1 : Vemos aqui una fecha que no esta, y por lo tanto sale como que la noticia es False
+-   https://noticiero-app.herokuapp.com/noticia/prueba_error : Vemos como no encuentra la pagina y sale un error
 
 ![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/hito3-6.png)
 ![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/hito3-7.png)
