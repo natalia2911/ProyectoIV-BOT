@@ -15,17 +15,12 @@ def Noticias_1(usuario):
 	n=funciones.Noticias()
 	datos=n.getNoticiasUsuario(usuario)
 	return jsonify(noticia=datos)
-    
+
 @app.route('/noticia/fecha/<fecha>')
 def Noticias_2(fecha):
 	n=funciones.Noticias()
 	datos=n.getNoticiasFecha(fecha)
 	return jsonify(noticia=datos)
-
-
-@app.errorhandler(404)
-def page_not_found(error):
-    return 'error HTTP 404, not found'
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
