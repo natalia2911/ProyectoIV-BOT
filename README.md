@@ -1,13 +1,13 @@
-﻿[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
+[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 [![Build Status](https://travis-ci.org/natalia2911/ProyectoIV-BOT.svg?branch=master)](https://travis-ci.org/natalia2911/ProyectoIV-BOT)
 
-# Proyecto IV : Bot Noticiero 
+# Proyecto IV : Bot Noticiero
 
 Repositorio creado para la asignatura de Infraestructura Virtual, de 4º curso, en el grado de Ingeniería Informática (GII) de la Universidad de Granada (UGR) en el curso 2018-2019
 
 ## Descripción
 
-Mi proyecto para este curso se basará en crear un microservicio en la nube el cual será usado por un bot de Telegram que nos indique las noticias del día o de días anteriores.
+Mi proyecto para este curso se basará en crear un micro-servicio en la nube el cual será usado por un bot de Telegram que nos indique las noticias del día o de días anteriores.
 Nuestro usuario podrá consultar las noticias de diferentes días, según la petición propia del usuario.
 
 ## Herramientas
@@ -17,13 +17,13 @@ Nuestro usuario podrá consultar las noticias de diferentes días, según la pet
 - Para realizar este proyecto usaremos un entorno virtual de desarrollo adecuado a python el cual será `virtualenv` para más información sobre este entorno de desarrollo [pinche aquí](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/doc/doc-entornovirtual.md).
 
 
-- Hemos pensado en usar un determinado editor de texto, en este caso será Atom ([Más información](https://atom.io/) 
+- Hemos pensado en usar un determinado editor de texto, en este caso será Atom ([Más información](https://atom.io/)
 
 - Será gestionado por una base de datos donde almacenemos todo tipo de noticias, podremos usar tanto [MySQL](https://www.mysql.com/), como [MariaDB](https://mariadb.org/), aun no lo tenemos completamente definido.
 
 - Para realizar el testeo vamos a utilizar la librería `unittest` por su gran variedad de funcionalidades. [Más información](https://docs.python.org/3/library/unittest.html)
 
-- El micro-framework que vamos a usar será `Flask` ya que me parece que será una buena herramienta para usar con Python, para desarrollar nuestro microservicio.
+- El micro-framework que vamos a usar será `Flask` ya que me parece que será una buena herramienta para usar con Python, para desarrollar nuestro micro servicio.
 
 - Ahora mismo utilizaremos `ficheros JSON` para el almacenamiento estatico, más tarde procederemos a implementar la BBDD.
 
@@ -45,23 +45,24 @@ Para más información ir a: [más info](https://github.com/natalia2911/Proyecto
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-Para que nuestro microservicio comience a funcionar se ha elegido como PaaS : Heroku
+Para que nuestro micro servicio comience a funcionar se ha elegido como PaaS : Heroku
 
 Para quien no sepa que es un Paas aquí dejo un pequeña explicación :
 
-El concepto de Plataforma como Servicio (PaaS, Platform as a Service) es una categoría de servicios cloud que proporciona una plataforma y un entorno que permiten a los desarrolladores crear aplicaciones y servicios que funcionen a través de internet. Los servicios PaaS se alojan en la nube, y los usuarios pueden acceder a ellos simplemente a través de su navegador web. [Más info](https://www.interoute.es/what-paas)
+El concepto de Plataforma como Servicio (PaaS, Platform as a Service) es una categoría de servicios cloud que proporciona una plataforma y un entorno que permiten a los desarrolladores crear aplicaciones y servicios que funcionen a través de Internet. Los servicios PaaS se alojan en la nube, y los usuarios pueden acceder a ellos simplemente a través de su navegador web. [Más info](https://www.interoute.es/what-paas)
 
 
 #### Motivos por los que se ha elegido Heroku
 
-Las caracteristicas principales de Heroku son:
-1.  Es una plataforma totalemente gratuita
+Las características principales de Heroku son:
+1.  Es una plataforma totalmente gratuita
 2. Podemos crear un dyno, que puede ejecutar un máximo de dos tipos de procesos
 3. Nuestro dyno utiliza 512 Mb de RAM
 4. Tras 30 minutos de inactividad el dyno se para (sleep), además debe estar parado 6 horas cada 24 horas.
 5. Podemos utilizar una base de datos postgreSQL con no más de 10.000 registros
 
 Una de las cosas que nos ha hecho elegirlo ha sido:
+
 	- Sobre todo que es gratis
 	- Permite la integración con Github
 	- Permite también con Travis-CI
@@ -72,4 +73,3 @@ Una de las cosas que nos ha hecho elegirlo ha sido:
 
 
 [Más información consultar Documentación](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/doc/doc-confPaaS.md)
-
