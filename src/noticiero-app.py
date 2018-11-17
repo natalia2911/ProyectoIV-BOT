@@ -10,6 +10,10 @@ app = Flask(__name__)
 def inicio():
 	return jsonify(status="Ok")
 
+@app.route('/status') 
+def status():
+	return jsonify(status="OK")
+
 @app.route('/noticia/usuario/<usuario>')
 def Noticias_1(usuario):
 	n=funciones.Noticias()
