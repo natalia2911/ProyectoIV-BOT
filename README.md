@@ -73,3 +73,19 @@ Una de las cosas que nos ha hecho elegirlo ha sido:
 
 
 [Más información consultar Documentación](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/doc/doc-confPaaS.md)
+
+
+## Configuración de entorno de pruebas usando contenedores : DOCKER
+
+Contenedor: [https://contenedornoticias.herokuapp.com/](https://contenedornoticias.herokuapp.com/)
+
+Hemos usado `Docker`, como contenedor. Así como el despliegue del contenedor lo hemos realizado en `Heroku`, la publicación de la imagen ha sido en `DockerHub`.
+
+URL del despliege de la imagen: https://hub.docker.com/r/natalia2911/proyectoiv-bot/
+
+
+Más información sobre lo que hemos usado:
+	- [Nuestra Documentación](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/doc/doc-docker.md)
+	- [Información Docker](https://www.docker.com/)
+	- [Información Heroku](https://dashboard.heroku.com/)
+	- [Información DockerHub](https://hub.docker.com/)
