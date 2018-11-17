@@ -2,4 +2,5 @@ build:
   docker:
     web: Dockerfile
 run:
-  web: gunicorn noticiero-app:app --log-file -
+  web: cd src && gunicorn noticiero-app:app --log-file -
+
