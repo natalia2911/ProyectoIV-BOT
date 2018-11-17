@@ -24,14 +24,14 @@ Nuestro DockerFile se queda con el siguiente aspecto:
 	EXPOSE 80
 	CMD cd src && gunicorn noticiero-app:app --log-file=- --bind 0.0.0.0:80
 
-Vamos a explicar a continuación cada uno los elementos usados:
-	- *FROM* : imagen usada por nuestro contenedor en este caso Python 3
-	- *MAINTAINER*: Establece los datos de autor/propietario del archivo Dockerfile
-	- *WORKDIR*: Establece el directorio para las directivas de CMD que se ejecutarán.
-	-*COPY*: Se copian todos los archivos de la aplicación.
-	-*RUN*: Permite ejecutar una instrucción en el contenedor
-	- *EXPOSE*: Asigna el puerto que usa el contenedor
-	- *CMD*: Establece el comando de inicio del proceso que se usará si no se indica uno al iniciar un contenedor con la imagen
+  Vamos a explicar a continuación cada uno los elementos usados:
+   - *FROM* : imagen usada por nuestro contenedor en este caso Python 3
+  - *MAINTAINER*: Establece los datos de autor/propietario del archivo Dockerfile
+  - *WORKDIR*: Establece el directorio para las directivas de CMD que se ejecutarán.
+  - *COPY*: Se copian todos los archivos de la aplicación.
+  - *RUN*: Permite ejecutar una instrucción en el contenedor
+  - *EXPOSE*: Asigna el puerto que usa el contenedor
+  - *CMD*: Establece el comando de inicio del proceso que se usará si no se indica uno al iniciar un contenedor con la imagen
 
 Nosotros primero hemos probado ha ejecutar el contenedor en local, para comprobar que no hubiera ningún fallo.
 
