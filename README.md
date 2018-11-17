@@ -88,7 +88,7 @@ Más información sobre lo que hemos usado:
 	- [Nuestra Documentación](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/doc/doc-docker.md)
 
 
-Información adicional: 
-	- [Información Docker](https://www.docker.com/)
-	- [Información Heroku](https://dashboard.heroku.com/)
-	- [Información DockerHub](https://hub.docker.com/)
+Información adicional:
+		- [Información Docker](https://www.docker.com/)
+		- [Información Heroku](https://dashboard.heroku.com/)
+		- [Información DockerHub](https://hub.docker.com/)

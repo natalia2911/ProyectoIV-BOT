@@ -49,7 +49,6 @@ y hemos actualizado con `git push heroku master`
 
 
  ## Creación de la imagen en DockerHub
-Imagen:
 
 [Imagen](https://hub.docker.com/r/natalia2911/proyectoiv-bot/)
 
@@ -57,15 +56,11 @@ Para usar la imagen directamente :
 ` docker run -it natalia2911/proyectoiv-bot`
 
 
-Para que se haga automáticamente nos hemos metido en la página https://cloud.docker.com/repository/docker/natalia2911/proyectoiv-bot/builds
+Para crear la imagen, hemos entrado en la pagina: https://hub.docker.com/ y en la parte de create hemos elegido `Create Automatic Build` y hemos sincronizado con nuestro repositorio de Github.
 
-Y hemos seleccionado que lo haga automáticamente.
-
-[](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/hito4-1.png)
 
  ## Ejemplos
  -	https://contenedornoticias.herokuapp.com/ : nos devuelve OK
  -	https://contenedornoticias.herokuapp.com/noticia/usuario/000102034847 : : Nos devuelve las noticias de un determinado usuario (En nuestro caso el usuario es un numero)
  -	https://contenedornoticias.herokuapp.com/noticia/fecha/2032018 : Nos devuelve una noticia de una determinada fecha
 - https://contenedornoticias.herokuapp.com/noticia/fecha/1 : Vemos aquí una fecha que no esta, y por lo tanto sale como que la noticia es False
- 
