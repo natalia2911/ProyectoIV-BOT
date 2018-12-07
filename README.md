@@ -17,8 +17,6 @@ Nuestro usuario podrá consultar las noticias de diferentes días, según la pet
 - Para realizar este proyecto usaremos un entorno virtual de desarrollo adecuado a python el cual será `virtualenv` para más información sobre este entorno de desarrollo [pinche aquí](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/doc/doc-entornovirtual.md).
 
 
-- Hemos pensado en usar un determinado editor de texto, en este caso será Atom ([Más información](https://atom.io/)
-
 - Será gestionado por una base de datos donde almacenemos todo tipo de noticias, podremos usar tanto [MySQL](https://www.mysql.com/), como [MariaDB](https://mariadb.org/), aun no lo tenemos completamente definido.
 
 - Para realizar el testeo vamos a utilizar la librería `unittest` por su gran variedad de funcionalidades. [Más información](https://docs.python.org/3/library/unittest.html)
@@ -72,7 +70,7 @@ Una de las cosas que nos ha hecho elegirlo ha sido:
 **Despliegue** https://noticiero-app.herokuapp.com/
 
 
-[Más información consultar Documentación](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/doc/doc-confPaaS.md)
+[Más información consultar documentación](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/doc/doc-confPaaS.md)
 
 
 ## Configuración de entorno de pruebas usando contenedores : DOCKER
@@ -85,7 +83,7 @@ URL del despliege de la imagen: https://hub.docker.com/r/natalia2911/proyectoiv-
 
 
 Más información sobre lo que hemos usado:
-	- [Nuestra Documentación](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/doc/doc-docker.md)
+	- [Nuestra documentación](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/doc/doc-docker.md)
 
 
 Información adicional:

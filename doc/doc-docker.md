@@ -1,16 +1,5 @@
-# Configuración Docker
-
-Para la configuración del entorno hemos realizado:
-
- ## Instalación Docker
- Para la instalación en Linux de Docker hemos usado:
- [Pasos](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce)
-
- ## DockerFile
-Para la creación de este fichero hemos usado como ayuda:
-[Ayuda](https://picodotdev.github.io/blog-bitix/2014/11/como-crear-una-imagen-para-docker-usando-un-dockerfile/)
-
-[Ayuda 2](https://javiermartinalonso.github.io/drafts/dockers/2017-10-02-docker-Dockerfile.html)
+# DockerFile
+Hemos usado Docker ya que nos permite aislar la aplicación, para que podamos hacer el despliege de manera muy sencilla y confiable, garantizando que dicho despliege sea escalable de forma eficiente sin importar el sistema operativo anfitrión.
 
 Nuestro DockerFile se queda con el siguiente aspecto:
 
