@@ -90,3 +90,20 @@ Información adicional:
 		- [Información Docker](https://www.docker.com/)
 		- [Información Heroku](https://dashboard.heroku.com/)
 		- [Información DockerHub](https://hub.docker.com/)
+
+
+## Depliegue en Azure
+
+Despliegue final: 13.80.251.123
+
+Hemos realizado el despliegue de una aplicación con Azure.
+
+Para el despliegue hemos necesitado:
+	- **playbook.yml** : para el aprovisionamiento.
+	- **Vagrantfile** : para la creación de la máquina virtual.
+	- **fabfile.py** : para el despliegue con fabric.
+
+Cabe destacar que nuestra aplicación necesitará seguir ampliandola, ya que podemos decir que este proyecto está en pruebas.
+
+
+[!documentación despliegue](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/doc/doc-despliegue.md)
