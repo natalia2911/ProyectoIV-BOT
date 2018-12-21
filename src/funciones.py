@@ -19,7 +19,7 @@ class Noticias:
 				if i["fecha"] == fecha:
 					for j in i["noticia"]:
 						noticia.append(j)
-				if not noticia: noticia = False 
+				if not noticia: noticia = False
 			return noticia
 
 		def getNoticiasUsuario(self, usuario):
@@ -28,7 +28,7 @@ class Noticias:
 				if i["usuario"] == usuario:
 					for j in i["noticia"]:
 						noticia.append(j)
-				if not noticia: noticia = False 
+				if not noticia: noticia = False
 			return noticia
 
 		def setNoticia(self, usuario, noticia, nNoticia):
@@ -45,6 +45,3 @@ class Noticias:
 				return True
 			else:
 				return False
-
-
-
