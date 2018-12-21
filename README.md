@@ -102,7 +102,7 @@ Para el despliegue hemos necesitado:
 
   - **playbook.yml** : para el aprovisionamiento.
    - **Vagrantfile** : para la creación de la máquina virtual.
-   	- **fabfile.py** : para el despliegue con fabric.
+   - **fabfile.py** : para el despliegue con fabric.
 
 Cabe destacar que nuestra aplicación necesitará seguir ampliandola, ya que podemos decir que este proyecto está en pruebas.
 
