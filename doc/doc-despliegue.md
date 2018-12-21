@@ -74,9 +74,9 @@ podremos poner, tanto nuestra IP de la máquina (la cual miramos en Azure Portal
 
 Las funciones que hemos definido son:
 
- - Desinstalar:
- - Instalar
- - Iniciar
+ - Desinstalar: borra todo el repositorio
+ - Instalar: se instala la aplicación
+ - Iniciar: lanza la aplicación y la ejecuta en segundo plano.
 
 
 Para poder probar las funciones del despliegue:
@@ -85,8 +85,9 @@ Para poder probar las funciones del despliegue:
 
 Por último, el despliegue final lo hemos realizado:
 
-IP : 13.80.251.123
-DNS : noticieroapp.westeurope.cloudapp.azure.com
+`IP : 13.80.251.123`
+
+`DNS : noticieroapp.westeurope.cloudapp.azure.com`
 
 
 Podemos comprobar que ahora la maquina virtual está efectivamente ejecutando el servicio:
