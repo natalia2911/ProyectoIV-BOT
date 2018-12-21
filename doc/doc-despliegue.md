@@ -16,14 +16,16 @@ Instalamos el cliente de Azure:
 
 Nos logeamos :  `az login`
 
+![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/login.png)
+
 Procedemos a obtener una serie de datos que necesitamos para crear lo que será nuestro **Vagrantfile**
 
 Necesitamos obtener:
 
    - ID del cliente
-   	- ID secreto del cliente
-   	- Tenant ID
-   	- Suscripción
+   - ID secreto del cliente
+   - Tenant ID
+   - Suscripción
 
 Para obtener los tres primeros datos ejecutaremos
 ```
@@ -31,12 +33,16 @@ az ad sp create-for-rbac
 ```
 Por terminal nos aparecerá algo así:
 
-//FOTO pero tapando comandos
+![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/datos.png)
+
 
 Para obtener la suscripción :
 ```
 az account list --query "[?isDefault].id" -o tsv
 ```
+
+![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/subscripcion.png)
+
 Estos 4 datos los necesitaremos exportar como variables de entorno para el archivo Vagrantfile.
 
 Una vez realizado esto, deberemos instalar el plugin de azure para vagrant:
@@ -85,4 +91,5 @@ DNS : noticieroapp.westeurope.cloudapp.azure.com
 
 Podemos comprobar que ahora la maquina virtual está efectivamente ejecutando el servicio:
 
-/FOTOS
+![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/ip.png)
+![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/dns.png)
