@@ -107,4 +107,4 @@ Para el despliegue hemos necesitado:
 Cabe destacar que nuestra aplicación necesitará seguir ampliandola, ya que podemos decir que este proyecto está en pruebas.
 
 
-[!documentación despliegue](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/doc/doc-despliegue.md)
+[documentación despliegue](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/doc/doc-despliegue.md)
