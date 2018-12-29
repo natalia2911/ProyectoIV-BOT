@@ -85,6 +85,7 @@ Vagrant.configure("2") do |config|
 		azure.location = "westeurope"
 		azure.tcp_endpoints = "80"
 		azure.vm_name = "noticieroapp"
+		azure.resource_group_name= "recursosiv"
 	end
 
 	config.vm.provision :ansible do |ansible|
