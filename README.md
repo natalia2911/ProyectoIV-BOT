@@ -7,12 +7,13 @@ Repositorio creado para la asignatura de Infraestructura Virtual, de 4º curso, 
 
 ## Descripción
 
-Mi proyecto para este curso se basará en crear un micro-servicio en la nube el cual será usado por un bot de Telegram que nos indique las noticias del día o de días anteriores.
-Nuestro usuario podrá consultar las noticias de diferentes días, según la petición propia del usuario.
+Mi proyecto para este curso se basará en crear un micro-servicio en la nube el cual será usado para realizar un noticiero que nos indique las noticias del día o de días anteriores.
+
+Nuestro usuario podrá consultar las noticias de diferentes días, y de diferentes usuarios según la petición propia del usuario.
 
 ## Herramientas
 
-- El lenguaje en que programaremos nuestro proyecto será en Python. He decidido usar este lenguaje ya que es un lenguaje que actualmente está en auge y creo que podría aportarme muchas cosas aprenderlo en profundidad.
+- El lenguaje en que programaremos nuestro proyecto será en **Python**. He decidido usar este lenguaje ya que es un lenguaje que actualmente está en auge y creo que podría aportarme muchas cosas aprenderlo en profundidad.
 
 - Para realizar este proyecto usaremos un entorno virtual de desarrollo adecuado a python el cual será `virtualenv` para más información sobre este entorno de desarrollo [pinche aquí](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/doc/doc-entornovirtual.md).
 
@@ -23,7 +24,7 @@ Nuestro usuario podrá consultar las noticias de diferentes días, según la pet
 
 - El micro-framework que vamos a usar será `Flask` ya que me parece que será una buena herramienta para usar con Python, para desarrollar nuestro micro servicio.
 
-- Ahora mismo utilizaremos `ficheros JSON` para el almacenamiento estatico, más tarde procederemos a implementar la BBDD.
+- Ahora mismo utilizaremos `ficheros JSON` para el almacenamiento estático, más tarde procederemos a implementar la BBDD.
 
 - Para realizar los test usaremos [Travis-CI](https://travis-ci.org/)
 
@@ -39,7 +40,7 @@ Para instalarla y probarla tendremos que instalar los `requirements.txt` y con l
 Para más información ir a: [más info](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/doc/doc-integracionCont.md)
 
 
-## Despliege y configuración de un PaaS - Heroku
+## Despliegue y configuración de un PaaS - Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
@@ -51,15 +52,6 @@ El concepto de Plataforma como Servicio (PaaS, Platform as a Service) es una cat
 
 
 #### Motivos por los que se ha elegido Heroku
-
-Las características principales de Heroku son:
-1.  Es una plataforma totalmente gratuita
-2. Podemos crear un dyno, que puede ejecutar un máximo de dos tipos de procesos
-3. Nuestro dyno utiliza 512 Mb de RAM
-4. Tras 30 minutos de inactividad el dyno se para (sleep), además debe estar parado 6 horas cada 24 horas.
-5. Podemos utilizar una base de datos postgreSQL con no más de 10.000 registros
-
-Una de las cosas que nos ha hecho elegirlo ha sido:
 
 	- Sobre todo que es gratis
 	- Permite la integración con Github
@@ -104,7 +96,7 @@ Para el despliegue hemos necesitado:
    - **Vagrantfile** : para la creación de la máquina virtual.
    - **fabfile.py** : para el despliegue con fabric.
 
-Cabe destacar que nuestra aplicación necesitará seguir ampliandola, ya que podemos decir que este proyecto está en pruebas.
+Cabe destacar que nuestra aplicación necesitará seguir ampliándola, ya que podemos decir que este proyecto está en pruebas.
 
 
 [documentación despliegue](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/doc/doc-despliegue.md)
