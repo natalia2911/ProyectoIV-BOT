@@ -16,9 +16,9 @@ A continuación tendremos que crear un grupo de recursos que más tarde especifi
 ![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/gruporecursos.png)
 
 Ahora procedemos a crear el servicio principal (Explicado en pasos posteriores)
-Seleccionamos nuestra subscripción, en este caso la proporcionada por el profesor, para el hito 5:
+Seleccionamos nuestra suscripción, en este caso la proporcionada por el profesor, para el hito 5:
 
-`az account set --subscription <ID SUBSCRIPCIÓN>`
+`az account set --subscription <ID SUSCRIPCIÓN>`
 
 ##  Máquina Virtual: Vagrant
 
@@ -88,7 +88,7 @@ vagrant box add noticieroapp https://github.com/azure/vagrant-azure/raw/v2.0/dum
 
 - **config.vm.box_url**: especificamos el dummy box que nos proporcionará una base para nuestra máquina virtual.
 - **config.ssh.private_key_path**: especificamos la clave para la conexión mediante ssh de la máquina.
-- **config.vm.provider :azure do |noticiero, override|**: Aquí vamos a proceder a indicar la configuración de la máquina, o el proveedor, donde vamos a crear el host de nuestra máquina virtual.  Especificamos con un string el nombre del proveedor en nuestro caso *Azure* y las dos variables que tenemos que son *noticiero* para hacer referencia a los diferentes parametros de configuración, y *override* la cual es necesaria para sobreescribir la aplicación.
+- **config.vm.provider :azure do |noticiero, override|**: Aquí vamos a proceder a indicar la configuración de la máquina, o el proveedor, donde vamos a crear el host de nuestra máquina virtual.  Especificamos con un string el nombre del proveedor en nuestro caso *Azure* y las dos variables que tenemos que son *noticiero* para hacer referencia a los diferentes parámetros de configuración, y *override* la cual es necesaria para sobrescribir la aplicación.
 - (Dentro de la configuración mencionada anteriormente tenemos) -->
 
 		noticiero.tenant_id = ENV['AZURE_TENANT_ID']  
@@ -111,7 +111,7 @@ vagrant box add noticieroapp https://github.com/azure/vagrant-azure/raw/v2.0/dum
 			export AZURE_CLIENT_SECRET="valor"
 			export AZURE_SUBSCRIPTION_ID="valor"
 	Para que estas variables se queden de modo permanente tendremos que ponerlas en el archivo : `.bashrc`
--	**noticiero.vm_size**: tamaño de los recursos de Azure, en nuestro caso hemos elegido *Standard_A0* ya que es uno de los más básicos y báratos, y se adapta a nuestra necesidades. Tiene 1 core, 0.75 GiB y cuesta 0.02$/hora. Tenemos más aquí : https://azureprice.net/ los podemos elegir también dependiendo de la localización de las granjas.
+-	**noticiero.vm_size**: tamaño de los recursos de Azure, en nuestro caso hemos elegido *Standard_A0* ya que es uno de los más básicos y baratos, y se adapta a nuestra necesidades. Tiene 1 core, 0.75 GiB y cuesta 0.02$/hora. Tenemos más aquí : https://azureprice.net/ los podemos elegir también dependiendo de la localización de las granjas.
 -	**noticiero.location**: localización donde queremos el host, o la granja de servidores donde nos van a asignar la máquina.
 - **noticiero.tcp_endpoints** : especificamos el puerto 80, que es el que abrimos, por que de momento, solo vamos a usar este.
 -	**noticiero.vm_name**: nombre de la máquina virtual.
@@ -142,7 +142,7 @@ Crearemos el archivo de provisionamiento para la máquina, donde tendremos todo 
 
   - name: Instalar Python
     become: true
-    command: apt-get install python3
+    command: apt-get install python3 python
 
   - name: Instalar Pip
     become: true
@@ -154,6 +154,9 @@ Crearemos el archivo de provisionamiento para la máquina, donde tendremos todo 
 
   - name: Actualizar pip
     command: pip3 install --upgrade pip
+
+  - name: Instalar Requerimientos
+    command: pip3 install -r ProyectoIV-BOT/requirements.txt
 
 
 ```
@@ -169,6 +172,15 @@ En el caso en que nuestro **playbook.yml** no se haya ejecutado a la hora de cre
 
 `vagrant provision
 `
+Vamos a proceder a explicar, lo que hemos incluido en nuestro fichero:
+  - **Actualizacion** : realizamos una actualización del sistema
+  -  **Instalar Python** : instalamos tanto python como python3
+  - **Instalar Pip**: instalamos pip3 y una serie de extras de python
+  - **Instalar Git**: instalamos git para que luego podamos clonar el repositorio
+  - **Actualizar pip**: actualizamos pip
+  - **Instalar Requerimientos**: los requerimientos necesarios para la máquina como gunicorn, o flask entre otros..
+
+Como podemos ver en algunas partes usamos *become* esto es para evitar que tener que usar sudo.
 
 
 ## Despliege : Fabfile
@@ -177,8 +189,6 @@ En el caso en que nuestro **playbook.yml** no se haya ejecutado a la hora de cre
 ```
 from fabric.api import *
 from fabric.contrib.console import confirm
-import os
-
 
 # Definimos una variable de entorno con el host al que nos vamos a conectar
 # y el nombre de usuario
@@ -205,18 +215,21 @@ def Actualizar():
 
 
 def Iniciar():
-	#Iniciamos el servicio
-	with cd("ProyectoIV-BOT/src/"):
-		sudo("gunicorn noticiero-app:app 0.0.0.0:80 --log-file - &")
+	with cd("ProyectoIV-BOT/src"):
+		sudo('nohup gunicorn noticiero-app:app -b 0.0.0.0:80')
+
 ```
  Las tareas que puede realizar es conectarse al servidor remoto, actualizar el repositorio, borrar los datos del código antiguo..
 
 Las funciones que hemos definido son:
 
- - Desinstalar: borra todo el repositorio, el código anterior
- - Instalar: se instala la aplicación
- - Iniciar: lanza la aplicación y la ejecuta en segundo plano.
- - Actualizar : actualiza la aplicación, haciéndole un pull al repositorio, y volviendo a instalar los requerimientos
+- **Desinstalar**: borra todo el repositorio, el código anterior
+
+ - **Instalar**: se instala la aplicación
+
+ - **Iniciar**: lanza la aplicación y la ejecuta en segundo plano. En esta parte veremos que hemos usado *nohup*, esto sirve para que se mantengan las tareas que lazamos y no se maten al acabarse el fabfile.
+
+ - **Actualizar** : actualiza la aplicación, haciéndole un pull al repositorio, y volviendo a instalar los requerimientos
 
 ![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/desinstalar.png)
 ![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/instalar.png)
@@ -256,7 +269,6 @@ http://docs.fabfile.org/en/1.14/tutorial.html
 **Vagrantfile**
 https://www.rubydoc.info/gems/vagrant-azure/1.3.0
 
-**Ansible : Playbook**
+**Playbook**
 https://blog.deiser.com/es/primeros-pasos-con-ansible
 https://stackoverrun.com/es/q/7574013
-
