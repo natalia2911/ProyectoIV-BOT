@@ -6,6 +6,7 @@ Instalamos el cliente de Azure:
 
 `	curl -L https://aka.ms/InstallAzureCli | bash
 `
+
 Nos logeamos :  `az login`
 
 ![](https://github.com/natalia2911/ProyectoIV-BOT/blob/master/img/login.png)
