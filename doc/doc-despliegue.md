@@ -170,9 +170,11 @@ podremos poner, tanto nuestra IP de la máquina (la cual miramos en Azure Portal
 
 En el caso en que nuestro **playbook.yml** no se haya ejecutado a la hora de crear la máquina, lo podremos hacer desde terminal con esta orden:
 
-`vagrant provision
-`
+    vagrant provision
+
+
 Vamos a proceder a explicar, lo que hemos incluido en nuestro fichero:
+
   - **Actualizacion** : realizamos una actualización del sistema
   -  **Instalar Python** : instalamos tanto python como python3
   - **Instalar Pip**: instalamos pip3 y una serie de extras de python
