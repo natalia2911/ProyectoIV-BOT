@@ -22,6 +22,3 @@ def Noticias_2(fecha):
 	n=funciones.Noticias()
 	datos=n.getNoticiasFecha(fecha)
 	return jsonify(noticia=datos)
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
