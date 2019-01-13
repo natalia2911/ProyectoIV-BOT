@@ -4,19 +4,27 @@
 
   tasks:
   - name: Actualizacion
-    command: sudo apt-get update
+    become: true
+    command: apt-get update
 
   - name: Instalar Python
-    command: sudo apt-get install python3
+    become: true
+    command: apt-get install python3
 
   - name: Instalar Pip
-    command: sudo apt-get install python3-pip
+    become: true
+    command: apt-get install python3-pip python3-setuptools
 
   - name: Instalar Git
-    command: sudo apt-get install git
+    become: true
+    command: apt-get install git
 
-  - name: Instalar Requerimientos
-    command: pip3 install -r ProyectoIV-BOT/requirements.txt
+  - name: Actualizar pip
+    command: pip3 install --upgrade pip
+
+
+
+
 
 
 
