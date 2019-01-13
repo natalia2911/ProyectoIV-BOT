@@ -86,13 +86,13 @@ Información adicional:
 
 ## Depliegue en Azure
 
-Despliegue final: 13.80.251.123
+Despliegue final: 13.94.228.215
 
 Hemos realizado el despliegue de una aplicación con Azure.
 
 Para el despliegue hemos necesitado:
 
-  - **playbook.yml** : para el aprovisionamiento.
+  - **playbook.yml** : para el provisionamiento.
    - **Vagrantfile** : para la creación de la máquina virtual.
    - **fabfile.py** : para el despliegue con fabric.
 
