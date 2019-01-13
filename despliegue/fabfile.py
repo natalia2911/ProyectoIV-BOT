@@ -1,8 +1,6 @@
 from fabric.api import *
 from fabric.contrib.console import confirm
 
-
-
 # Definimos una variable de entorno con el host al que nos vamos a conectar
 # y el nombre de usuario
 env.user = "vagrant"
@@ -28,6 +26,5 @@ def Actualizar():
 
 
 def Iniciar():
-	#Iniciamos el servicio
-	with cd("ProyectoIV-BOT/src/"):
-		sudo("sudo gunicorn noticiero-app:app -b 0.0.0.0:80 &")
+	with cd("ProyectoIV-BOT/src"):
+		sudo('nohup gunicorn noticiero-app:app -b 0.0.0.0:80')
