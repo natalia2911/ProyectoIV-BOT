@@ -9,7 +9,7 @@
 
   - name: Instalar Python
     become: true
-    command: apt-get install python3
+    command: apt-get install python3 python
 
   - name: Instalar Pip
     become: true
@@ -21,6 +21,10 @@
 
   - name: Actualizar pip
     command: pip3 install --upgrade pip
+
+  - name: Instalar Requerimientos
+    command: pip3 install -r ProyectoIV-BOT/requirements.txt
+
 
 
 
