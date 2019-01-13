@@ -3,14 +3,14 @@
 
 Vagrant.configure("2") do |config|
 
-  	# Box que vamos a utilizar en la máquina virtual.
-  	config.vm.box = "noticieroapp"
-  	# Especificamos el dummy box, el cual nos proporcionará una base para nuestra máquina.
-  	config.vm.box_url = 'https://github.com/msopentech/vagrant-azure/raw/master/dummy.box'
+  # Box que vamos a utilizar en la máquina virtual.
+  config.vm.box = "noticieroapp"
+  # Especificamos el dummy box, el cual nos proporcionará una base para nuestra máquina.
+  config.vm.box_url = 'https://github.com/msopentech/vagrant-azure/raw/master/dummy.box'
 
-  	# Le especificamos la clave, para la conexión mediante ssh de la máquina.
+  # Le especificamos la clave, para la conexión mediante ssh de la máquina.
 	config.ssh.private_key_path = "~/.ssh/id_rsa"
-
+  
   	# Configuración de la máquina (proveedor) donde vamos a crear el host de la máquina:
 	config.vm.provider :azure do |noticiero, override|
 
